@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@media print {
+  /* Hide everything during print except the inner voter slip content card */
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  body > div:not(#voter-slip-overlay),
+  #voter-slip-overlay > div > div:not(#voter-slip-print-content),
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Make sure the container takes up full space, sits flat, and has no shadow or padding */
+  #voter-slip-overlay {
+    position: static !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  #voter-slip-container {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #voter-slip-print-content {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 5.5in !important; /* Perfect standard pocket slip size */
+  }
+}

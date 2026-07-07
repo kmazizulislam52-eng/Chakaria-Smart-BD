@@ -1,0 +1,6 @@
+{
+  "name": "Election Voter Portal",
+  "description": "An elegant, high-capacity voter database portal featuring instant search, slip printing, and a password-protected admin dashboard with CSV bulk import.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
